@@ -15,7 +15,7 @@ import java.util.List;
 
 public class BaseDao<T> {
 
-    QueryRunner runn=new QueryRunner();
+    private QueryRunner runn=new QueryRunner();
 
     private  Class<T> type;
 
@@ -33,6 +33,9 @@ public class BaseDao<T> {
 
     /**
      * 通用增删改
+     * @param sql sql
+     * @param args  可变数组接受占位符参数
+     * @return
      */
     public int update(String sql,Object...args){
         int count=0;
