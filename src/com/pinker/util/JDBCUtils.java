@@ -13,7 +13,13 @@ public class JDBCUtils {
     private static DataSource dataSource=null;
 
     static {
-       dataSource=new  ComboPooledDataSource("c3p0Config");
+        String c3p0Conf=null;
+        if(LoadDatabase.getDatabaseType().equals("SQLServer")){
+            c3p0Conf="SQLServerC3p0Config";
+        }else  if(LoadDatabase.getDatabaseType().equals("mysql")){
+            c3p0Conf="mysqlC3p0Config";
+        }
+       dataSource=new  ComboPooledDataSource(c3p0Conf);
     }
 
     private  static  QueryRunner runn=new QueryRunner();
