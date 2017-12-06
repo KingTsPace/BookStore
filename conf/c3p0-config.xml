@@ -3,18 +3,18 @@
 
 
     <!-- mysql config -->
-    <named-config name="c3p0Config">
-        <property name="driverClass">com.mysql.jdbc.Driver</property>
-        <property name="jdbcUrl">jdbc:mysql://localhost:3306/bookstore</property>
-        <property name="user">root</property>
-        <property name="password">123456</property>
-    </named-config>
-
-    <!-- SQLServer config-->
     <!--<named-config name="c3p0Config">-->
-        <!--<property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>-->
-        <!--<property name="jdbcUrl">jdbc:sqlserver://localhost:1433;databaseName=bookstore</property>-->
-        <!--<property name="user">sa</property>-->
+        <!--<property name="driverClass">com.mysql.jdbc.Driver</property>-->
+        <!--<property name="jdbcUrl">jdbc:mysql://localhost:3306/bookstore</property>-->
+        <!--<property name="user">root</property>-->
         <!--<property name="password">123456</property>-->
     <!--</named-config>-->
+
+    <!-- SQLServer config-->
+    <named-config name="c3p0Config">
+        <property name="driverClass">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="jdbcUrl">jdbc:sqlserver://localhost:1433;databaseName=bookstore</property>
+        <property name="user">sa</property>
+        <property name="password">123456</property>
+    </named-config>
 </c3p0-config>
