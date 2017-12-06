@@ -54,7 +54,7 @@ public class BaseDao<T> {
         T t=null;
         Connection conn=JDBCUtils.getConnection();
         try {
-            runn.query(conn,sql,new BeanHandler<>(type),args);
+          t=  runn.query(conn,sql,new BeanHandler<>(type),args);
         } catch (SQLException e) {
             e.printStackTrace();
         }finally {

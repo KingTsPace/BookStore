@@ -38,7 +38,7 @@ public class JDBCUtils {
      */
 public static void close(ResultSet rs,PreparedStatement ps,Connection conn){
 
-    if (rs == null) {
+    if (rs != null) {
         try {
             rs.close();
         } catch (SQLException e) {
@@ -46,7 +46,7 @@ public static void close(ResultSet rs,PreparedStatement ps,Connection conn){
         }
     }
 
-    if (ps == null) {
+    if (ps != null) {
         try {
             ps.close();
         } catch (SQLException e) {
@@ -54,7 +54,7 @@ public static void close(ResultSet rs,PreparedStatement ps,Connection conn){
         }
     }
 
-    if (conn == null) {
+    if (conn != null) {
         try {
             conn.close();
         } catch (SQLException e) {

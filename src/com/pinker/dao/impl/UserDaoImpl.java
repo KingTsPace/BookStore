@@ -10,7 +10,7 @@ public class UserDaoImpl extends BaseDao<User> implements UserDao{
         String name=user.getName();
         String password=user.getPassword();
 
-        String sql="select * from user where username=?,password=?";
+        String sql="select * from user where username=? and password=?";
         User user1=getBean(sql,name,password);
         return user1;
     }
@@ -18,7 +18,7 @@ public class UserDaoImpl extends BaseDao<User> implements UserDao{
     @Override
     public int saveUser(User user) {
         String sql="insert into user (username,password,email) values(?,?,?) ";
-        int column=update(sql,user.getName(),user.getPassword(),user.getId());
+        int column=update(sql,user.getName(),user.getPassword(),user.getEmail());
 
         return column;
     }
