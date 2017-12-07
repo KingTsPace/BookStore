@@ -3,7 +3,7 @@ package com.pinker.dao;
 
 import com.pinker.entity.User;
 
-public interface UserDao {
+public interface UserDao extends BaseDao{
 
     /**
      *查询用户是否存在
